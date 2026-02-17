@@ -50,14 +50,6 @@ export function Header() {
           ))}
         </nav>
 
-        {/* CTA */}
-        <a
-          href="#pricing"
-          className="hidden lg:inline-flex items-center gap-2 bg-foreground text-background px-5 py-2 rounded-full text-xs font-medium hover:opacity-90 transition-opacity"
-        >
-          {'初回92%OFF'}
-        </a>
-
         {/* Mobile menu toggle */}
         <button
           className="lg:hidden text-foreground"
@@ -85,13 +77,6 @@ export function Header() {
               {link.label}
             </a>
           ))}
-          <a
-            href="#pricing"
-            onClick={() => setMenuOpen(false)}
-            className="block text-center bg-foreground text-background px-5 py-3 rounded-full text-sm font-medium mt-4"
-          >
-            {'初回92%OFFキャンペーン'}
-          </a>
         </nav>
       )}
     </header>
