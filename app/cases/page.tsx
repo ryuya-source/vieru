@@ -3,6 +3,7 @@ import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import { Footer } from "@/components/sections/footer"
 import { StickyFooter } from "@/components/sections/sticky-footer"
+import { TreatmentAreasTabs } from "@/components/sections/treatment-areas-tabs"
 
 export const metadata: Metadata = {
   title: "症例一覧 | vieru 脂肪冷却専門サロン",
@@ -74,6 +75,7 @@ const cases = [
     description:
       "ふくらはぎの外側・内側を冷却。脚全体のラインがすっきりし、ブーツの着脱がスムーズに。",
   },
+
   {
     area: "顎下・フェイスライン",
     sessions: "2回",
@@ -83,6 +85,7 @@ const cases = [
     description:
       "顎下の脂肪を小型カップで丁寧に冷却。フェイスラインがシャープになり、横顔の印象が改善。",
   },
+
 ]
 
 const frontAreas = [
@@ -128,7 +131,7 @@ export default function CasesPage() {
                 Case Studies
               </p>
               <h1 className="font-serif text-3xl md:text-4xl font-semibold mb-4 text-balance">
-                {'症例・施術箇所一覧'}
+                {'症例・施術箇所'}
               </h1>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {'実際にご来店いただいたお客様の施術結果をご紹介します。'}
@@ -137,7 +140,7 @@ export default function CasesPage() {
 
             {/* Cases */}
             <section className="mb-16">
-              <h2 className="font-serif text-xl font-semibold mb-6">{'症例紹介'}</h2>
+              <h2 className="font-serif text-xl font-semibold mb-6">{'症例'}</h2>
               <div className="space-y-4">
                 {cases.map((c, index) => (
                   <div key={c.area} className="bg-card rounded-2xl p-6 md:p-8">
@@ -190,57 +193,7 @@ export default function CasesPage() {
                 {'全12部位からお選び頂けます。'}
               </p>
 
-              {/* Front */}
-              <div className="mb-6">
-                <h3 className="text-sm font-semibold mb-3 flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-foreground" />
-                  {'体の前面'}
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {frontAreas.map((area) => (
-                    <div
-                      key={`${area.name}-${area.size}`}
-                      className="flex items-start gap-3 bg-card rounded-xl p-4"
-                    >
-                      <span className="shrink-0 mt-0.5 text-[10px] font-bold bg-muted text-muted-foreground w-6 h-6 rounded-full flex items-center justify-center">
-                        {area.size}
-                      </span>
-                      <div>
-                        <p className="text-sm font-medium">{area.name}</p>
-                        <p className="text-xs text-muted-foreground mt-0.5">
-                          {area.description}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Back */}
-              <div>
-                <h3 className="text-sm font-semibold mb-3 flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-foreground" />
-                  {'体の背面'}
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {backAreas.map((area) => (
-                    <div
-                      key={`${area.name}-${area.size}`}
-                      className="flex items-start gap-3 bg-card rounded-xl p-4"
-                    >
-                      <span className="shrink-0 mt-0.5 text-[10px] font-bold bg-muted text-muted-foreground w-6 h-6 rounded-full flex items-center justify-center">
-                        {area.size}
-                      </span>
-                      <div>
-                        <p className="text-sm font-medium">{area.name}</p>
-                        <p className="text-xs text-muted-foreground mt-0.5">
-                          {area.description}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              <TreatmentAreasTabs frontAreas={frontAreas} backAreas={backAreas} />
 
               <p className="text-xs text-center text-muted-foreground mt-6">
                 {'※M = Mサイズカップ、L = Lサイズカップ'}
