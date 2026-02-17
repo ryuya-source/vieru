@@ -85,19 +85,22 @@ const cases = [
   },
 ]
 
-const treatedAreas = [
-  { name: "上腹部", description: "みぞおち下〜おへそ上の脂肪" },
-  { name: "下腹部", description: "おへそ下〜恥骨上のポッコリ脂肪" },
-  { name: "ウエスト（左右）", description: "くびれ部分の横腹の脂肪" },
-  { name: "背中", description: "肩甲骨下〜腰上の広範囲" },
-  { name: "腰まわり", description: "腰の後ろ側の脂肪" },
-  { name: "二の腕", description: "腕の裏側のたるみ部分" },
-  { name: "太もも（前面）", description: "膝上〜太もも前側" },
-  { name: "太もも（内側）", description: "内もものすき間を作りたい部分" },
-  { name: "太もも（外側）", description: "張り出した外もも" },
-  { name: "ふくらはぎ", description: "脚の太さが気になる部分" },
-  { name: "膝上", description: "膝にのった脂肪" },
-  { name: "顎下", description: "二重顎・フェイスライン" },
+const frontAreas = [
+  { name: "上腹部（じょうふくぶ）", size: "M", description: "胃のあたり" },
+  { name: "下腹部（かふくぶ）", size: "M", description: "下腹" },
+  { name: "脇腹（わきばら）", size: "M", description: "ウエストサイド" },
+  { name: "前内もも（まえうちもも）", size: "M", description: "太ももの前面・内側" },
+  { name: "上腹部", size: "L", description: "中央の広範囲（上）" },
+  { name: "下腹部", size: "L", description: "中央の広範囲（下）" },
+]
+
+const backAreas = [
+  { name: "背中（せなか）", size: "M", description: "肩甲骨付近" },
+  { name: "二の腕（にのうで）", size: "M", description: "上腕" },
+  { name: "腰（こし）", size: "M", description: "ウエスト背面" },
+  { name: "ヒップ下", size: "M", description: "お尻の下ライン" },
+  { name: "後ろ内もも（うしろうちもも）", size: "M", description: "太ももの裏面・内側" },
+  { name: "ふくらはぎ", size: "M", description: "ふくらはぎ" },
 ]
 
 export default function CasesPage() {
@@ -182,27 +185,66 @@ export default function CasesPage() {
 
             {/* Treated areas */}
             <section className="mb-16">
-              <h2 className="font-serif text-xl font-semibold mb-3">{'施術可能な部位'}</h2>
-              <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
-                {'以下の部位に脂肪冷却の施術が可能です。複数部位の同時施術もお選びいただけます。'}
+              <h2 className="font-serif text-xl font-semibold mb-3">{'施術箇所'}</h2>
+              <p className="text-sm text-muted-foreground mb-8 leading-relaxed">
+                {'全12部位からお選び頂けます。'}
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {treatedAreas.map((area) => (
-                  <div
-                    key={area.name}
-                    className="flex items-start gap-3 bg-card rounded-xl p-4"
-                  >
-                    <span className="w-2 h-2 rounded-full bg-foreground shrink-0 mt-1.5" />
-                    <div>
-                      <p className="text-sm font-medium">{area.name}</p>
-                      <p className="text-xs text-muted-foreground mt-0.5">
-                        {area.description}
-                      </p>
+              {/* Front */}
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold mb-3 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-foreground" />
+                  {'体の前面'}
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {frontAreas.map((area) => (
+                    <div
+                      key={`${area.name}-${area.size}`}
+                      className="flex items-start gap-3 bg-card rounded-xl p-4"
+                    >
+                      <span className="shrink-0 mt-0.5 text-[10px] font-bold bg-muted text-muted-foreground w-6 h-6 rounded-full flex items-center justify-center">
+                        {area.size}
+                      </span>
+                      <div>
+                        <p className="text-sm font-medium">{area.name}</p>
+                        <p className="text-xs text-muted-foreground mt-0.5">
+                          {area.description}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
+
+              {/* Back */}
+              <div>
+                <h3 className="text-sm font-semibold mb-3 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-foreground" />
+                  {'体の背面'}
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {backAreas.map((area) => (
+                    <div
+                      key={`${area.name}-${area.size}`}
+                      className="flex items-start gap-3 bg-card rounded-xl p-4"
+                    >
+                      <span className="shrink-0 mt-0.5 text-[10px] font-bold bg-muted text-muted-foreground w-6 h-6 rounded-full flex items-center justify-center">
+                        {area.size}
+                      </span>
+                      <div>
+                        <p className="text-sm font-medium">{area.name}</p>
+                        <p className="text-xs text-muted-foreground mt-0.5">
+                          {area.description}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <p className="text-xs text-center text-muted-foreground mt-6">
+                {'※M = Mサイズカップ、L = Lサイズカップ'}
+              </p>
             </section>
 
             {/* Back link */}
