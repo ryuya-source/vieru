@@ -1,3 +1,6 @@
+import Link from "next/link"
+import { ArrowRight } from "lucide-react"
+
 const cases = [
   {
     area: "腹部",
@@ -82,6 +85,16 @@ export function BeforeAfter() {
           <br />
           {'安心して継続できます。'}
         </p>
+
+        <div className="text-center mt-10">
+          <Link
+            href="/cases"
+            className="inline-flex items-center gap-2 bg-foreground text-background px-8 py-4 rounded-full text-sm font-medium tracking-wide hover:opacity-90 transition-opacity"
+          >
+            {'詳細な症例・施術箇所を見る'}
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
       </div>
     </section>
   )
