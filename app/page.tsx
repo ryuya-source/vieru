@@ -32,6 +32,7 @@ export default function Page() {
         <TreatmentFlow />
         <Pricing />
         <FAQ />
+        <Contraindications />
         <StoreInfo />
       </main>
       <Footer />
