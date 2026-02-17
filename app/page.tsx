@@ -10,7 +10,8 @@ import { Reasons } from "@/components/sections/reasons"
 import { TreatmentFlow } from "@/components/sections/treatment-flow"
 import { Pricing } from "@/components/sections/pricing"
 import { FAQ } from "@/components/sections/faq"
-import { FinalCTA } from "@/components/sections/final-cta"
+
+import { Contraindications } from "@/components/sections/contraindications"
 import { StoreInfo } from "@/components/sections/store-info"
 import { Footer } from "@/components/sections/footer"
 import { StickyFooter } from "@/components/sections/sticky-footer"
@@ -31,7 +32,7 @@ export default function Page() {
         <TreatmentFlow />
         <Pricing />
         <FAQ />
-        <FinalCTA />
+        <Contraindications />
         <StoreInfo />
       </main>
       <Footer />

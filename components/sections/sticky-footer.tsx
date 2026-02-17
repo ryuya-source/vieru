@@ -19,11 +19,6 @@ export function StickyFooter() {
       }`}
     >
       <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
-        <div className="hidden sm:block shrink-0">
-          <p className="text-xs font-semibold">{'初回92%OFF'}</p>
-          <p className="text-[10px] text-muted-foreground">{'二子玉川店 ｜ 自由が丘店'}</p>
-        </div>
-
         <div className="flex items-center gap-2 w-full sm:w-auto">
           <a
             href="#"

@@ -1,30 +1,11 @@
 "use client"
 
 import { useState } from "react"
-import { ChevronDown } from "lucide-react"
+import Link from "next/link"
+import { ChevronDown, ArrowRight } from "lucide-react"
+import { faqs } from "@/lib/faq-data"
 
-const faqs = [
-  {
-    question: "施術中に痛みは感じますか？",
-    answer:
-      "施術中はほとんど痛みを感じません。施術部位にアプリケータを装着すると皮膚が吸引されるため、多少の違和感を感じることもありますが、数分で慣れるお客様が大半です。冷却を行う段階になるとほとんど痛みはございません。",
-  },
-  {
-    question: "1回の施術で効果が得られますか？",
-    answer:
-      "初回施術から効果を実感頂いているお客様もおりますが、ご希望のボディラインに近づけるためには複数回の施術を推奨しております。再度同じ部位を施術する場合は最低4週間あける必要がございます。",
-  },
-  {
-    question: "リバウンドしますか？",
-    answer:
-      "脂肪細胞の数自体が減少するため、施術部位のリバウンドの事例は少ないです。ただし、食べすぎや運動不足などによって施術効果が低くなることがあります。",
-  },
-  {
-    question: "施術後に腫れや痛みは残りませんか？",
-    answer:
-      "施術直後は皮膚に赤みが残る場合がございますが、1週間〜10日ほどで徐々に引いていきます。",
-  },
-]
+const previewFaqs = faqs.slice(0, 4)
 
 export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
@@ -42,7 +23,7 @@ export function FAQ() {
         </div>
 
         <div className="space-y-3">
-          {faqs.map((faq, index) => (
+          {previewFaqs.map((faq, index) => (
             <div key={faq.question} className="bg-card rounded-2xl overflow-hidden">
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
@@ -73,9 +54,15 @@ export function FAQ() {
           ))}
         </div>
 
-        <p className="text-center text-sm text-muted-foreground mt-8">
-          {'その他ご不明点などお気軽にご相談ください'}
-        </p>
+        <div className="text-center mt-10">
+          <Link
+            href="/faq"
+            className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:opacity-70 transition-opacity"
+          >
+            {`全${faqs.length}件のご質問を見る`}
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
       </div>
     </section>
   )

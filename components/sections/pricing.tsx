@@ -1,4 +1,5 @@
-import { MessageCircle, ExternalLink } from "lucide-react"
+import Link from "next/link"
+import { ArrowRight } from "lucide-react"
 
 const plans = [
   {
@@ -41,7 +42,6 @@ export function Pricing() {
               {'92%OFF'}
             </span>
           </h2>
-          <p className="text-sm text-muted-foreground">{'でご利用頂けます'}</p>
         </div>
 
         <div className="space-y-4 mt-12">
@@ -99,22 +99,15 @@ export function Pricing() {
           </div>
         </div>
 
-        {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
-          <a
-            href="#"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#06C755] text-[#FFFFFF] px-8 py-4 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity"
+        {/* Full pricing menu link */}
+        <div className="text-center mt-10">
+          <Link
+            href="/pricing"
+            className="inline-flex items-center gap-2 bg-foreground text-background px-8 py-4 rounded-full text-sm font-medium tracking-wide hover:opacity-90 transition-opacity"
           >
-            <MessageCircle className="w-5 h-5" />
-            {'LINEで予約する'}
-          </a>
-          <a
-            href="#"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-foreground text-background px-8 py-4 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity"
-          >
-            <ExternalLink className="w-4 h-4" />
-            {'ホットペッパーで予約する'}
-          </a>
+            {'全料金メニューを見る'}
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </div>
     </section>

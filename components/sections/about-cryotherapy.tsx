@@ -1,4 +1,4 @@
-import { Snowflake } from "lucide-react"
+import { Snowflake, ChevronDown } from "lucide-react"
 
 export function AboutCryotherapy() {
   return (
@@ -31,6 +31,16 @@ export function AboutCryotherapy() {
                 {'脂肪を冷却して新陳代謝を促し痩せる、アメリカ発祥の痩身法。FDAに認められ注目されています。'}
               </p>
             </div>
+          </div>
+
+          <div className="text-center mt-8">
+            <a
+              href="#benefits"
+              className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:opacity-70 transition-opacity"
+            >
+              {'メカニズムを確認'}
+              <ChevronDown className="w-4 h-4" />
+            </a>
           </div>
         </div>
       </div>
