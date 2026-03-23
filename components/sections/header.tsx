@@ -8,6 +8,7 @@ const navLinks = [
   { label: "メリット", href: "#benefits" },
   { label: "症例", href: "#cases" },
   { label: "選ばれる理由", href: "#reasons" },
+  { label: "施術の流れ", href: "#flow" },
   { label: "料金", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
   { label: "店舗", href: "#stores" },
@@ -33,7 +34,7 @@ export function Header() {
     >
       <div className="max-w-5xl mx-auto px-6 flex items-center justify-between h-16">
         {/* Logo */}
-        <a href="#" className="font-serif text-xl font-bold tracking-wide">
+        <a href="/" className="font-serif text-xl font-bold tracking-wide">
           vieru
         </a>
 

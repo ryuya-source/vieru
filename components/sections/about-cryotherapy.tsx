@@ -6,9 +6,6 @@ export function AboutCryotherapy() {
     <section id="about" className="py-24 px-6 bg-card">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-4">
-            What is Fat Freezing
-          </p>
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-balance">
             {"脂肪細胞そのものに"}
             <br />

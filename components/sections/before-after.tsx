@@ -6,10 +6,10 @@ const cases = [
     sessions: "3回",
     period: "2ヶ月",
     result: "ウエスト \u22124.5cm",
-    beforeLabel: "Before",
-    afterLabel: "After",
-    beforeImg: "/placeholder.svg?height=400&width=500",
-    afterImg: "/placeholder.svg?height=400&width=500",
+    beforeLabel: "施術前",
+    afterLabel: "施術後",
+    beforeImg: "/images/abb_.beforejpeg.jpeg",
+    afterImg: "/images/abb_after.jpeg",
     beforeAlt: "腹部の施術前写真",
     afterAlt: "腹部の施術後写真 - ウエスト-4.5cm",
   },
@@ -18,8 +18,8 @@ const cases = [
     sessions: "2回",
     period: "1.5ヶ月",
     result: "\u22123.2cm",
-    beforeLabel: "Before",
-    afterLabel: "After",
+    beforeLabel: "施術前",
+    afterLabel: "施術後",
     beforeImg: "/placeholder.svg?height=400&width=500",
     afterImg: "/placeholder.svg?height=400&width=500",
     beforeAlt: "二の腕の施術前写真",
@@ -32,9 +32,6 @@ export function BeforeAfter() {
     <section id="cases" className="py-24 px-6 bg-card">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-4">
-            Case Studies
-          </p>
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-balance">
             {"実際の症例"}
           </h2>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { MessageCircle, ExternalLink } from "lucide-react"
+import { LINE_RESERVATION_URL, HOTPEPPER_RESERVATION_URL } from "@/lib/constants"
 
 export function StickyFooter() {
   const [visible, setVisible] = useState(false)
@@ -26,14 +27,18 @@ export function StickyFooter() {
 
         <div className="flex items-center gap-2 w-full sm:w-auto">
           <a
-            href="#"
+            href={LINE_RESERVATION_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 bg-[#06C755] text-[#FFFFFF] px-4 py-2.5 rounded-full text-xs font-semibold hover:opacity-90 transition-opacity"
           >
             <MessageCircle className="w-4 h-4" />
             <span>LINE</span>
           </a>
           <a
-            href="#"
+            href={HOTPEPPER_RESERVATION_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 bg-foreground text-background px-4 py-2.5 rounded-full text-xs font-semibold hover:opacity-90 transition-opacity"
           >
             <ExternalLink className="w-3.5 h-3.5" />

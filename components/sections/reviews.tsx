@@ -37,9 +37,6 @@ export function Reviews() {
     <section id="reviews" className="py-24 px-6">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-4">
-            Reviews
-          </p>
           <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-4 text-balance">
             {'お客様の声'}
           </h2>

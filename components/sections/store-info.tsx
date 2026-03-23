@@ -25,9 +25,6 @@ export function StoreInfo() {
     <section id="stores" className="py-24 px-6">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-4">
-            Locations
-          </p>
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-balance">
             {"店舗案内"}
           </h2>

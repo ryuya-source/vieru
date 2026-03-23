@@ -37,9 +37,6 @@ export function TreatmentFlow() {
     <section id="flow" className="py-24 px-6 bg-card">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-4">
-            Treatment Flow
-          </p>
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-balance">
             {"施術の流れ"}
           </h2>

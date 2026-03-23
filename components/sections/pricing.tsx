@@ -1,4 +1,5 @@
 import { MessageCircle, ExternalLink } from "lucide-react"
+import { LINE_RESERVATION_URL, HOTPEPPER_RESERVATION_URL } from "@/lib/constants"
 
 const plans = [
   {
@@ -32,9 +33,6 @@ export function Pricing() {
     <section id="pricing" className="py-24 px-6">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-4">
-          <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-4">
-            Campaign
-          </p>
           <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-3 text-balance">
             {'初回お試し'}
             <span className="inline-block bg-foreground text-background px-3 py-1 rounded-lg text-2xl md:text-3xl ml-2">
@@ -102,14 +100,18 @@ export function Pricing() {
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
           <a
-            href="#"
+            href={LINE_RESERVATION_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#06C755] text-[#FFFFFF] px-8 py-4 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity"
           >
             <MessageCircle className="w-5 h-5" />
             {'LINEで予約する'}
           </a>
           <a
-            href="#"
+            href={HOTPEPPER_RESERVATION_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-foreground text-background px-8 py-4 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity"
           >
             <ExternalLink className="w-4 h-4" />

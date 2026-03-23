@@ -18,8 +18,8 @@ const reasons: Reason[] = [
     title: "脂肪冷却の専門サロン",
     description:
       "脂肪冷却に特化した専門的な知識・経験・技術。脂肪冷却の専門サロンとして、知識・経験・技術による安心安全な施術を提供しています。",
-    image: "/placeholder.svg?height=240&width=400",
-    imageAlt: "脂肪冷却専門の施術機器と施術風景",
+    image: "/images/treatment0ー.jpeg",
+    imageAlt: "脂肪冷却施術の様子",
   },
   {
     icon: TrendingUp,
@@ -56,9 +56,6 @@ export function Reasons() {
     <section id="reasons" className="py-24 px-6">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-4">
-            Why vieru
-          </p>
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-balance">
             {"vieruが選ばれる理由"}
           </h2>

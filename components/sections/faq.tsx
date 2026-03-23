@@ -33,9 +33,6 @@ export function FAQ() {
     <section id="faq" className="py-24 px-6">
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-4">
-            FAQ
-          </p>
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-balance">
             {'よくあるご質問'}
           </h2>

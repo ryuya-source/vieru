@@ -9,11 +9,8 @@ export function FutureVision() {
   return (
     <section className="py-24 px-6 bg-card">
       <div className="max-w-2xl mx-auto text-center">
-        <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-4">
-          After 3 Months
-        </p>
         <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-12 text-balance">
-          {'3ヶ月後のあなた'}
+          {'期待できる効果'}
         </h2>
 
         <div className="space-y-4 mb-10">

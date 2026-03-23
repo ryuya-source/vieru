@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Check } from "lucide-react"
 
 const concerns = [
@@ -13,8 +14,7 @@ export function Concerns() {
   return (
     <section id="concerns" className="py-24 px-6">
       <div className="max-w-2xl mx-auto text-center">
-        <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-4">Concerns</p>
-        <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-12 text-balance">
+        <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-8 text-balance">
           {'こんなお悩みありませんか？'}
         </h2>
 
@@ -30,13 +30,29 @@ export function Concerns() {
           ))}
         </div>
 
-        <div className="space-y-2">
-          <p className="font-serif text-xl md:text-2xl font-medium">
-            {'その脂肪、'}
-          </p>
-          <p className="font-serif text-xl md:text-2xl font-medium">
-            {'"努力不足"ではありません。'}
-          </p>
+        {/* スマホ最優先: 常に横並び（画像は右）。ブロック全体を中央配置し、文面は折り返しつつ text-center */}
+        <div className="flex w-full justify-center">
+          <div className="inline-flex max-w-full flex-row flex-nowrap items-end gap-2 sm:gap-3 md:gap-4">
+            <div className="min-w-0 max-w-[calc(100vw-8.75rem)] space-y-1.5 text-center sm:max-w-[min(24rem,calc(100vw-8rem))] sm:space-y-2">
+              <p className="font-serif text-lg font-medium leading-snug sm:text-xl md:text-2xl">
+                {'その脂肪、'}
+              </p>
+              <p className="font-serif text-lg font-medium leading-snug sm:text-xl md:text-2xl">
+                {'"努力不足"ではありません。'}
+              </p>
+            </div>
+            <div className="relative w-20 shrink-0 sm:w-24 md:w-28 lg:w-32">
+              <Image
+                src="/images/irast.png"
+                alt="vieruスタッフがお悩みに寄り添うイラスト"
+                width={1790}
+                height={2400}
+                className="h-auto w-full object-contain"
+                sizes="(max-width: 640px) 80px, (max-width: 1024px) 112px, 128px"
+                priority
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

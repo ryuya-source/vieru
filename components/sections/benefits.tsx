@@ -50,9 +50,6 @@ export function Benefits() {
     <section id="benefits" className="py-24 px-6">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-4">
-            7 Benefits
-          </p>
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-balance">
             {'7つの効果・メリット'}
           </h2>
